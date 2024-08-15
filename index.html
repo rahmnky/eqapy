@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="playMedia()">Try Me</button>
+    <audio id="audio" src="sound.mp3"></audio>
+    <img id="image" src="" style="display:none;">
+    <script>
+        function playMedia() {
+            var audio = document.getElementById('audio');
+            var image = document.getElementById('image');
+
+            // Change these URLs to your chosen image and sound files
+            image.src = 'image.jpg';
+            image.style.display = 'block';
+
+            audio.play();
+        }
+    </script>
+</body>
+</html>
